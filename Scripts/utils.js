@@ -33,6 +33,7 @@ function initWasm() {
     resizeImage = Module._resizeImage;
     createSimpleI32Buffer = Module._createSimpleI32Buffer;
     nn_LoadFile = Module._nn_LoadFile;
+    document.getElementById("testDigits").disabled = false;
   }
 }
 

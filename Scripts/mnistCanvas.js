@@ -78,7 +78,6 @@ function findGreater(response) {
 
 function test_Digits() {
     loadPixels();
-   // var ghita = new NeuralObject([43, 61, 1], [2, 0], 0.2);
     sentData = []
     for(var i = 0; i < pixels.length; i += 4) {
         sentData.push(255 - pixels[i]);
@@ -88,13 +87,11 @@ function test_Digits() {
     for(var i = 0; i < buffer.length; i++) {
         s += buffer[i];
     }
-   // console.log(sentData.length, buffer.length, buffer, s, height, width)
     var NeuralNetwork = new NeuralObject([784, 81, 10], [2, 0], 0.2);
     NeuralNetwork.nn_LoadFile();
     normalizeDistance(buffer);
     var response = NeuralNetwork.feedForward(buffer);
     console.log(NeuralNetwork.feedForward(buffer));
-   // loadImageBuffer(buffer);
     addTest(findGreater(response))
 }
 
@@ -121,17 +118,7 @@ function mouseClicked() {
 }
 
 function executeCode() {
-    var newUrl = "http://localhost:5000/execute.json";
-    var value = document.getElementById("txtarea").value.split("\n")
-    console.log(value)
-    httpPost(newUrl, 'json', {"code": value}, function(response) {
-        var resp = "";
-        for(var i = 0; i < response["response"].length; i++) {
-            resp += response["response"][i] + "\n";
-        }
-        document.getElementById("output").innerHTML = resp
-        console.log(response)
-    });
+    window.location.href = 'runCoder.html'
 }
 
 function mouseDragged() {

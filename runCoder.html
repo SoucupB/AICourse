@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css" rel="stylesheet"/>
+    <link href="renderedhtml.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="./pyodide_dev.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="insertion-box" class="jumbotron">
+        <h1>Testing section</h1>
+        <p class="lead">
+            Before you decide to actually get the library, maybe its better to test it before taking any action.
+            In this section you can test the library with different problems.
+        </p>
+        <hr />
+        <button class="button button3" onclick="return executeCode()">Run Code</button>
+        <p></p>
+        <textarea rows="20" cols="120" id = 'txtarea'>
+import math
+a = 5
+b = 3
+print("Sum ", a + b)
+print("SQRT sum is", math.sqrt(a + b))
+        </textarea>
+        <p class="lead">
+          Execution output!
+        </p>
+        <textarea rows="5" cols="120" id = 'output'></textarea>
+        <script src = 'Scripts/CodeExecute.js'></script>
+      </div>
+    </div>
+  </body>
+</html>
